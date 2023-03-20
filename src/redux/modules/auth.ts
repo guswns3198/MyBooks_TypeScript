@@ -9,7 +9,7 @@ interface AuthState {
 const initialState: AuthState = {
   token: null,
   loading: false,
-  error: null,
+  error: null
 };
 
 const prefix = 'my-books/auth';
