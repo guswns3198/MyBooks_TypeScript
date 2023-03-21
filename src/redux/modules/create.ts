@@ -1,3 +1,5 @@
+// store를 만드는 역할을 하는 파일
+
 import { applyMiddleware, createStore } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension";
 import reducer from "./reducer";
