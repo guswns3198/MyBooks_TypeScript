@@ -1,3 +1,5 @@
+// 인증을 관리하는 파일
+
 import { createActions, handleActions } from "redux-actions";
 
 interface AuthState {
