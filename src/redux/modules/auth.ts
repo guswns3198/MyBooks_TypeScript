@@ -16,7 +16,12 @@ const initialState: AuthState = {
 
 const prefix = 'my-books/auth';
 
-export const { pending, success, fail } = createActions("PENDING", "SUCCESS", "FAIL", { prefix });
+export const { pending, success, fail } = createActions(
+  "PENDING",
+  "SUCCESS",
+  "FAIL",
+  { prefix }
+);
 
 const reducer = handleActions<AuthState, string>({
   PENDING: (state) => ({
