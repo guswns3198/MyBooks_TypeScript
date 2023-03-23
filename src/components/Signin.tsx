@@ -20,7 +20,7 @@ const Signin: React.FC<SigninProps> = ({ login }) => {
         <Row className={styles.signin_contents}>
 
           <Col span={12}>
-            <img src="/bg_signin.png" alt="signin"/>
+            <img src="/bg_signin.png" alt="signin" className={styles.signin_bg} />
           </Col>
 
           <Col span={12}>
