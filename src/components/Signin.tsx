@@ -1,4 +1,4 @@
-import { Button, Col, Input, Row } from "antd";
+import { Button, Col, Input, InputRef, Row } from "antd";
 // import { Button, Col, Input, Row } from "antd";
 import React, { useRef } from "react";
 import { LoginReqType } from "../types";
@@ -10,16 +10,19 @@ interface SigninProps {
 
 const Signin: React.FC<SigninProps> = ({ login }) => {
 
-  const emailRef = useRef<Input>(null);
-  const passwordRef = useRef<Input>(null);
+  const emailRef = useRef<InputRef>(null);
+  const passwordRef = useRef<InputRef>(null);
 
   return (
     <Row align="middle" className={styles.signin_row}>
       <Col span={24}>
+
         <Row className={styles.signin_contents}>
+
           <Col span={12}>
-            <img src="/bg_signin.png" alt="signin" className={styles.signin_bg} />
+            <img src="/bg_signin.png" alt="signin"/>
           </Col>
+
           <Col span={12}>
             <div className={styles.signin_title}>My Books</div>
             <div className={styles.signin_subtitle}>Please Note Your Opinion</div>
@@ -66,8 +69,8 @@ const Signin: React.FC<SigninProps> = ({ login }) => {
   
 
   function click() {
-    const email = emailRef.current.state.value;
-    const password = passwordRef.current.state.value;
+    const email = emailRef.current!.input!.value;
+    const password = passwordRef.current!.input!.value;
 
     login({ email, password });
   }
